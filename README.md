@@ -1,6 +1,6 @@
 # FAC-application
-A personal website made as a part of FAC application.
-This one page website was made using only HTML, CSS and vanila Javascript. 
+A personal website for Founders and Coders.
+This one page website is made using only HTML, CSS and vanila Javascript.<br> 
 It does NOT include : Github themes, bootstrap, jquery and other frameworks and libraries.
 
 To visit, please click <a href="http://itsina96.github.io/FAC-application">here</a>
