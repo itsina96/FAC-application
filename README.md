@@ -5,4 +5,4 @@ It does NOT include : Github themes, bootstrap, jquery and other frameworks and 
 
 To visit, please click <a href="http://itsina96.github.io/FAC-application">here</a>
 
-Thank you for taking time and visiting my website. I hope you enjoy! 
+Thanks for taking your time and visiting my website. I hope you enjoy! 
