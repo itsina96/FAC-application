@@ -1,68 +1,119 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="utf-8">
-	<title>Ina Yoon</title>
-	<link rel="stylesheet" href="fac.css">
-	<link href="https://fonts.googleapis.com/css?family=Bitter|Karla|Permanent+Marker|Work+Sans&display=swap"
-	rel="stylesheet">
-</head>
-
-<body>
-	<!-- First page -->
-	<div id="wrapper">
-		<header id="top">
-			<nav>
-				<ul id="hover">
-					<li><a href="#myStory">My Story</a></li>
-					<li><a href="#whyFAC">Why FAC?</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
-					<li><a href="#bottom">Contact</a></li>
-				</ul>
-			</nav>
-		</header>
-		<section>
-			<!-- First page -->
-			<div id="intro">
-				<h1>Hi, I’m Ina</h1>
-				<h2>An artist ready to dive into Tech.</h2>
-			</div>
-		</section>
-		
-		<!-- 1. Who I am with image carousel -->
-		<section>
-			<div id="myStory">
-				<p></p>
-			</div>
-		</section>
-		
-		
-		<!-- Why FAC -->
-		
-		<!-- Portfolio -->
-		
+<!-- 더해야할 기능들
+    2. 이미지 카루셀 키보드 기능 더하기
+    3. 이미지 카루셀 미디어쿼리 적용하는것
+    4. 작은화면에서 햄버거 목록 눌렀을때 목록이 한번에 팍 뜨는거 말고 차르륵 나오도록 (자바스크립트)
+    5. 스크롤다운 하면서 목록이 이미지 카루셀 지나칠때 목록글씨가 카루셀보다 뒤에 있어서 가림. 이거 고치기. 
+    6. 디브 삭제하고 섹션만 써야되는가? (섹션안에 아이디) 디브를 쓰는게 excessive 한가? -->
+    
+    <!DOCTYPE html>
+    <html>
+    
+    <head>
+        <meta charset="utf-8">
+        <title>Ina Yoon</title>
+        <link rel="stylesheet" href="fac.css">
+        <link rel="icon" href="faviconforina.png">
+        <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap"rel="stylesheet">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/81e6d1b2b6.js"></script>
+    </head>
+    
+    <body>
+        <nav class="nav">
+            <label for="toggle" class="hamburger">&#9776;</label>
+            <input type="checkbox" id="toggle">
+            <div class="menu">
+                <a class="child" href="#myJourney">My journey</a>
+                <a class="child" href="#whyFAC">why fac</a>
+                <a class="child" href="#portfolio">portfolio</a>
+                <a class="child" href="#contact">contact</a>
+            </div>
+        </nav>
+        
+        <!-- Hi, I'm Ina -->
         <section>
-				<div id="portfolio">
-					<p>portfolio</p>
-				</div>
-			</section>
-			
-			<footer id="bottom">
-				<div class="bottom1">
-					<h2>Let's get in touch 🖐🏼</h2>
-					<p><a href="mailto:itsina96@gmail.com?">itsina96@gmail.com</a>
-						<br>+44 07490932860
-						<br>© 2019 All Rights Reserved
-					</p>
-				</div>
-				<div class="bottomTwo underline">
-					<a href="#top">(BACK TO TOP)</a>
-				</div>
-			</footer>
-		</div>
-		
-		<script src="fac.js"></script>
-	</body>
-	
-	</html>
+            <div id="intro">
+                <h1 class="header-big">Hi, I’m Ina</h1>
+                <h2 class="header-small">An artist ready to dive into Tech.</h2><br>
+                <a href="#myJourney"><div class="bouncing-ball"></div></a>
+            </div>
+        </section>
+        
+        <!-- My Journey -->
+        <section>
+            <div id="myJourney">
+                <h3 class="title">1. My Journey</h3>
+                <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+                </p>
+                <div class="carousel-container">
+                    <i class="fas fa-chevron-left" id="prevBtn"></i>
+                    <i class="fas fa-chevron-right" id="nextBtn"></i>
+                    <div class="carousel-slide">
+                        <img src="image/image3.jpg" id="lastClone" alt="King-family-one">
+                        <img src="image/image1.jpg" alt="King-family-one">
+                        <img src="image/image2.jpg" alt="King-family-two">
+                        <img src="image/image3.jpg" alt="King-family-three">
+                        <img src="image/image1.jpg" id="firstClone" alt="King-family-one">
+                    </div>
+                    <button class="controls" id="pause">Pause</button>
+                </div>
+                <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores perferendis ipsam nulla repellat magnam numquam odit unde delectus, optio aliquid, alias corporis rem facilis sed ullam quas vitae qui sapiente.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Why FAC? -->
+        <section>
+            <div id="whyFAC">
+                <h3 class="title">2. Why Founders and Coders?</h3>
+                <div class="doggoIntro">
+                    <img src="image/doggo.gif" alt="dog-refusing-broccolie"><span><em>"No more<br>spoon feeding.."</em></span>
+                </div>
+                <p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam sunt distinctio explicabo, quae praesentium nemo quod nesciunt modi eligendi accusamus eveniet, harum repellendus excepturi unde, deleniti sint. Tenetur, beatae assumenda.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure porro hic nulla laboriosam, libero consequuntur expedita at doloribus unde assumenda asperiores facilis deserunt ullam debitis pariatur quaerat tenetur ratione totam.
+                </p>
+            </div>
+        </section>
+        
+        <!-- Portfolio -->
+        <section>
+            <div id="portfolio">
+                <h3 class="title">3. What I've been doing for the past 4 months</h3>    
+                <div class="iconLink">
+                    <a href="https://www.freecodecamp.org/itsina96"><i class="fab fa-free-code-camp"></i></a>
+                    <a href="https://github.com/itsina96/FAC-application"><i class="fab fa-github"></i></a>
+                    <a href="http://codewar.com"><img src="image/codewar.png"></a>
+                </div> 
+            </div>
+        </section>
+        
+        <!-- Footer -->
+        <footer id="contact">
+            <h4 class="get-in-touch">Let's get in touch 🖐🏼</h4>
+            <p><a href="mailto:itsina96@gmail.com?">itsina96@gmail.com</a>
+                <br>+44 07490932860
+                <br><span> All Rights Reserved © 2019 Ina Yoon</span>
+                <span><a href="#top">(BACK TO TOP)</a></span>
+            </p>
+        </footer>
+        
+        
+        <script src="fac.js"></script>
+    </body>
+    </html>
