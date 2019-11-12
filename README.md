@@ -1,14 +1,14 @@
 # FAC application 
-A personal website made for Founders and Coders.<br>
+A personal website made for the Founders and Coders application.<br>
 This one page website is built with HTML, CSS and vanila Javascript.<br> 
 It does NOT include : Github themes, bootstrap, jquery or any other frameworks and libraries.
 
 To visit, please click <a href="http://itsina96.github.io/FAC-application">here</a>
 
 # Prerequisites
-[x] Earn a minimum of 250 points on freeCodeCamp.
-[] Create a one-page website and host it on GitHub Pages.
-[x] Reach 5 kyu and 300 honor points in JavaScript on Codewars.
+-[x] Earn a minimum of 250 points on freeCodeCamp.
+-[] Create a one-page website and host it on GitHub Pages.
+-[x] Reach 5 kyu and 300 honor points in JavaScript on Codewars.
 
 
 Thanks for taking your time and visit my website. I hope you enjoy. 
