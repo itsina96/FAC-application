@@ -9,5 +9,3 @@ To visit, please click <a href="http://itsina96.github.io/FAC-application">here<
 - [x] Earn a minimum of 250 points on freeCodeCamp.
 - [ ] Create a one-page website and host it on GitHub Pages.
 - [x] Reach 5 kyu and 300 honor points in JavaScript on Codewars.
-
-http://itsina96.github.io/FAC-application
