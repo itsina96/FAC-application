@@ -126,6 +126,7 @@ slides.addEventListener('transitionend', keepLooping);
 
 //Allow keyboard navigation with the left/right arrow keys
 function keyNav(e) {
+  // why === doesn't work? because if the user input is a HTML input text field, it might interpret a number as a string. "37" === 37 false.
   if (e.keyCode == '37') {
     goBack();
   } else if (e.keyCode == '39') {

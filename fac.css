@@ -1,8 +1,11 @@
-/* ----- General control center ¯\_(ツ)_/¯ ----- */
+:root {
+    --clr-point:#e3513b;
+    --clr-dark:#292929;
+    --clr-blue: #bccdeb;
+}
 html {
     scroll-behavior: smooth;
 }
-
 body {
     display: flex;
     flex-direction: column;
@@ -10,265 +13,344 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background: #f5f1eb;
+    background: #FCFBFA;
     font-family: "Karla", sans-serif;
+    color: var(--clr-dark)
 }
-
 a {
     text-decoration: none;
-    color: black;
+    color: var(--clr-dark);
 }
-
 p {
-    line-height: 1.7; 
+    line-height: 2.5rem;
+    font-size: 1.4rem;
+    letter-spacing: 0.4px;
 }
-
 section {
-    padding: 10%;
-}
-
-::selection {
-    color: #e3513b;
-}
-
-
-/* ----- Main text section control ----- */
-.title {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
-    letter-spacing: 0.09rem;
-}
-
-#myJourney, #whyFAC, #portfolio {
+    padding: 5% 10%;
     font-size: 1.65rem;
-    height: 100vh;
-    display: inline-block;
-    padding-top: 10%;
+}
+::selection {
+    color: white;
+    background: var(--clr-dark);
+}
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
 }
 
-/* ----- Navigation bar & hamburger menu ----- */
-.nav {
-    text-align: center;
-    line-height: 3.5;
-    height: 70px;
+/* ----- Navigation & burger icon----- */
+header {
+    cursor: pointer;
+}
+nav {
+    width: 430px;
+    left: -100%;
+    height: 100vh;
+    top:0%;
+    margin: 0;
+    z-index: 5;
+    background: var(--clr-blue);
     text-transform: uppercase;
-    width: 100%;
-    font-size: 1.2rem;
-    letter-spacing: 0.15rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: left 0.55s ease;
+    overflow: hidden;
     position: fixed;
 }
-
-.menu {
-    margin: 10px 15px 0 15px;
+.nav-links {
+    list-style: none;
+    padding: 0;
 }
-
-.colorOnClick {
-    color: #e3513b;
+.nav-links li {
+    padding-bottom: 30%;
 }
-
-.menu a {
-    /* clear: right; DOES THIS NECCESARY? */
-    text-decoration: none;
-    margin: 0 22.5px 0 22.5px;
-}
-
-.menu a:hover {
-    color :#e3513b;
-}
-
-.hamburger {
-    margin: 0 40px 0 0;
-    font-size: 30px;
-    display: none;
-    text-align: right;
-}
-
-#toggle {
-    display: none;
-}
-
-
-/* ----- Hi I'm Ina starts here ----- */
-#intro {
-    font-size: 6rem;
+.nav-links li, .backtotop {
+    letter-spacing: 2px;
+    font-size: 1.3rem;
     text-align: center;
-    /* height: 100vh; */
+}
+.burger {
+    z-index: 10;
+    position: fixed;
+    padding: 35px 45px;
+}
+.burger div {
+    width: 30px;
+    height: 2px;
+    margin: 8px;
+    background-color: var(--clr-dark);
+}
+.burger span {
+    letter-spacing: 1px;
+}
+.toggle .line1 {
+    transform: rotateZ(-45deg) translate(-8px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotateZ(45deg) translate(-8px, -6px);
+}
+.line1, .line2, .line3 {
+    transition: all 0.3s ease;
+}
+.navToggle {
+    left:0;
 }
 
-.header-big {
-    margin-top: 100px;
-    margin-bottom: 0px;
+/* Eye ball */
+.eyes {
+    transform: translateY(-50%);
+    margin: 130px 0 30px 0;
+}
+.eye {
+    width: 60px;
+    height: 90px;
+    background: transparent;
+    display: inline-block;
+    border: 1.5px solid var(--clr-dark);
+    border-radius: 50%;
+    /* margin: 8px; */
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
 }
 
-.header-small {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 2.6rem;
-    font-weight: 700;
-    color: #292929;
+.ball {
+    width: 25px;
+    height: 35px;
+    background: var(--clr-dark);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
 }
 
+
+/* ----- Hi I'm Ina ----- */
+#intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+}
+
+.introText h1 {
+    margin-bottom: 0;
+    font-size: 2.8rem;
+}
+.introText h3 {
+    margin-bottom: 15%;
+    font-size: 1.7rem;
+}
 .bouncing-ball {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    background: #e3513b;
+    background: var(--clr-point);
     padding: 0;
     margin: 0 auto;
-    animation: bouncing 1.25s infinite;
-    /* animation-timing-function: linear; */
-    /* animation-timing-function: cubic-bezier(0.25, 0.25, 0.75, 0.75); 위에것보다 더 구체적으로 움직임 컨트롤하는거*/
+    animation: bouncing 0.7s infinite;
+    animation-direction: alternate;
 }
 
 @keyframes bouncing {
-    0% {transform:translateY(0px);}
-    50% {transform:translateY(-36px);}
-    100% {transform:translateY(0px);}
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
 }
 
 
+
 /* ----- My Journey starts here ----- */
+
 /* image carousel */
-.carousel-container {
-    width: 700px;
+.carousel {
+    width: 80%;
     margin: auto;
     overflow: hidden;
     position: relative;
 }
-
-.carousel-slide {
+.slides {
     display: flex;
     width: 100%;
-    height: 100%;
+    height: 450px;
 }
- 
-#prevBtn {
-    font-size: 26px;
+/* 
+.slide {
+    padding: 10%;
+} */
+
+i {
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+}
+.prevBtn, .nextBtn {
     cursor: pointer;
     position: absolute;
-    top: 50%;
-    z-index: 10;
-    left: 2%;
-    color: white;
+    top: 50%; 
+    z-index: 5;
+    padding: 7px;
 }
-
-#nextBtn {
-    font-size: 26px;
+.nextBtn {
+    right:0;
+    transform: rotate(-45deg);
+    margin-right: 10px;
+}
+.prevBtn {
+    transform: rotate(135deg);
+    margin-left: 10px;
+}
+.pauseBtn {
+    display: flex;
+    justify-content: center;
+}
+.play {
+    font-size: 16px;
+    padding: 7px 15px;
+    border-radius: 4px;
+    bottom: 1%;
     cursor: pointer;
-    position: absolute;
-    top: 50%;
-    z-index: 10;
-    right: 2%;
-    color: white;
+    outline: none;
 }
-/* Above two selectors share 90% same property:values. Be short & clean. */
-
+.slides div {
+    min-width: 100%;
+    font-size: 1rem;
+    letter-spacing: 1px;
+}
+.slides div {
+    background: var(--clr-blue);
+    font-family: "Inconsolata", sans-serif;
+}
 
 
 /* ----- why FAC starts here ----- */
-.doggoIntro {
-    display: flex;
-    padding-left: 10%;
-}
 
-.doggoIntro span {
-    position: relative;
-    transform: translateY(38%);
+.whyfac-img1 {
     text-align: center;
-    right: 40px;
-    font-size: 2.5rem;
+}
+.reason1-1 {
+    width: 80%;
+    max-width: 700px;
+}
+
+.svg-whyfac {
+    width: 90%;
+}
+
+.flex-box {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+}
+
+.flex-content {
+    box-sizing: border-box;
+    /* flex-basis: 50%;
+    flex-grow: 1; */
+    justify-content: center;
+    align-items: baseline;
+}
+
+
+.whyfac-door {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.whyfac-subheading {
+    display: block;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #e3513b;
-    letter-spacing: 0.02em;
 }
-
-.doggoIntro img {
-    width: 400px;
-    height: 400px;
-}
-/* 
-#whyFAC p span {
-    color: gray;
-} */
-
-#whyFAC p span .num {
-    font-size: 4rem; 
-}
-
-
 /* ----- Portfolio starts here ----- */
 .iconLink {
     font-size: 5rem;
 }
 
-.iconLink a:hover {
-    color: #e3513b;
+.iconLink img {
+    width: 5rem;
 }
-
+.iconLink a:hover {
+    color: var(--clr-point);
+}
 
 /* ----- Footer starts here ----- */
-#contact {
-    padding: 3%;
-    padding-left: 5%;
-    padding-right: 5%;
+footer {
+    text-align: center;
     font-size: 1.5rem;
+    margin: 10% 0 40px 0;
+}
+footer h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
 }
 
-.get-in-touch {
-    margin-bottom: 0px;
-    font-size: 2.3rem;
-} 
-
-#contact span:nth-of-type(1) {
-    font-size: 1.2rem;
+footer div:last-child {
+    margin-top: 30px;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
 }
 
-#contact span:nth-of-type(2) {
-    position: absolute;
-    right: 6%;
+.button-scroll {
+    position: fixed;
+    right: 35px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--clr-point);
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    display: none;
 }
+.button-scroll div {
+    transform: rotate(-20deg);
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color:white;
+}
+
 
 
 /* ----- Responsiveness on mobile ----- */
-@media (max-width: 700px) {
-    html {
-        font-size: 85%;
-    }
 
-    h1 {
-        font-size: 5rem;
+@media screen and (max-width: 768px) {
+    .carousel {
+        width: 100vw;
     }
-   
-    .hamburger {
-        display: block;
-        cursor: pointer;
-    }
-    .menu {
-        text-align: center;
+    .slides {
         width: 100%;
-        display: none;
-        background:#f5f1eb;
     }
-    .menu a {
-        display: block;
-        margin: 0;
+    .slides div {
+        height: 100vw;
     }
-    #toggle:checked + .menu {
-        display: block;
+    nav {
+        height: 100vh;
     }
-
-    #contact {
-        text-align: center;
+    .flex-content {
+        flex-basis: 100%;
     }
-    #contact span:nth-of-type(2) {
-        display: none;
+    .flex-content:nth-of-type(4) {
+        order: -1;
     }
-    .doggoIntro {
-        flex-wrap: wrap;
-        padding: 0;
+    .flex-content:nth-of-type(3) {
+        order: 4;
     }
-    .doggoIntro {
-        transform: none;
-    }
+    
 }
+
+
+
