@@ -58,12 +58,12 @@ const carousel = document.querySelector(".carousel");
 const slides = document.querySelector(".slides");
 const prevBtn = document.querySelector(".prevBtn");
 const nextBtn = document.querySelector(".nextBtn");
-const pauseBtn = document.querySelector(".play");
+const pauseBtn = document.querySelector(".pause");
 const images = document.querySelectorAll(".slides div");
 const size = images[0].clientWidth;
 
-let counter = 0;
 let status = 1;
+let counter = 0;
 let paused = false;
 
 // Move images automatically

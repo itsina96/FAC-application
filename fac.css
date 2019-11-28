@@ -21,7 +21,7 @@ a {
     text-decoration: none;
     color: var(--clr-dark);
 }
-p {
+p, ol {
     line-height: 2.5rem;
     font-size: 1.4rem;
     letter-spacing: 0.4px;
@@ -37,7 +37,7 @@ section {
 .title {
     font-size: 2rem;
     font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-align: center;
 }
 
@@ -104,7 +104,7 @@ nav {
     left:0;
 }
 
-/* Eye ball */
+/* Eye balls */
 .eyes {
     transform: translateY(-50%);
     margin: 130px 0 30px 0;
@@ -143,6 +143,7 @@ nav {
     flex-direction: column;
     padding: 0;
     text-align: center;
+    letter-spacing: 0.85px;
 }
 
 .introText h1 {
@@ -172,26 +173,49 @@ nav {
 
 
 /* ----- My Journey starts here ----- */
+.inawho {
+    padding-bottom: 7%;
+}
 
 /* image carousel */
 .carousel {
-    width: 80%;
+    /* width: 100%;
+    overflow: hidden;
+    position: relative; */
+
+    width: 45%;
     margin: auto;
+    border: 5px solid white;
     overflow: hidden;
     position: relative;
 }
 .slides {
     display: flex;
     width: 100%;
-    height: 450px;
 }
-/* 
 .slide {
-    padding: 10%;
-} */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    font-family: "Inconsolata", sans-serif;
+    background: var(--clr-dark);
+    color: white;
+    min-width: 100%;
+}
+.slide p {
+    padding: 5%;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+
+.subheading-carousel {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
 
 i {
-    border: solid black;
+    border: solid white;
     border-width: 0 2px 2px 0;
     display: inline-block;
 }
@@ -199,7 +223,7 @@ i {
     cursor: pointer;
     position: absolute;
     top: 50%; 
-    z-index: 5;
+    z-index: 2;
     padding: 7px;
 }
 .nextBtn {
@@ -211,92 +235,58 @@ i {
     transform: rotate(135deg);
     margin-left: 10px;
 }
+
 .pauseBtn {
     display: flex;
     justify-content: center;
 }
-.play {
+.pause {
     font-size: 16px;
     padding: 7px 15px;
     border-radius: 4px;
     bottom: 1%;
     cursor: pointer;
     outline: none;
-}
-.slides div {
-    min-width: 100%;
-    font-size: 1rem;
-    letter-spacing: 1px;
-}
-.slides div {
-    background: var(--clr-blue);
-    font-family: "Inconsolata", sans-serif;
+    z-index: 10;
+    position: absolute;
 }
 
 
 /* ----- why FAC starts here ----- */
-
-.whyfac-img1 {
-    text-align: center;
-}
-.reason1-1 {
-    width: 80%;
-    max-width: 700px;
-}
-
 .svg-whyfac {
-    width: 90%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.flex-box {
+.grid-whyfac {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-gap: 1rem;
 }
 
-.flex-content {
-    box-sizing: border-box;
-    /* flex-basis: 50%;
-    flex-grow: 1; */
-    justify-content: center;
-    align-items: baseline;
-}
-
-
-.whyfac-door {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-.whyfac-subheading {
+.subheading-whyfac {
     display: block;
     font-size: 1.5rem;
     font-weight: 700;
 }
-/* ----- Portfolio starts here ----- */
-.iconLink {
-    font-size: 5rem;
-}
 
-.iconLink img {
-    width: 5rem;
-}
-.iconLink a:hover {
-    color: var(--clr-point);
-}
+
+/* ----- Portfolio starts here ----- */
+
 
 /* ----- Footer starts here ----- */
 footer {
     text-align: center;
     font-size: 1.5rem;
-    margin: 10% 0 40px 0;
+    padding: 6% 0 4% 0;
 }
 footer h4 {
     font-size: 1.8rem;
     margin-bottom: 0;
 }
-
 footer div:last-child {
     margin-top: 30px;
     font-size: 1rem;
@@ -328,29 +318,25 @@ footer div:last-child {
 /* ----- Responsiveness on mobile ----- */
 
 @media screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+    }
     .carousel {
         width: 100vw;
     }
     .slides {
-        width: 100%;
+        width: 100vw;
     }
-    .slides div {
-        height: 100vw;
-    }
-    nav {
+    /* nav {
         height: 100vh;
-    }
-    .flex-content {
-        flex-basis: 100%;
-    }
+    } */
     .flex-content:nth-of-type(4) {
         order: -1;
     }
     .flex-content:nth-of-type(3) {
         order: 4;
     }
-    
+    .grid-whyfac {
+        grid-template-columns: 1fr;
+    }
 }
-
-
-
