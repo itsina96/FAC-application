@@ -178,14 +178,9 @@ nav {
 }
 
 /* image carousel */
-.carousel {
-    /* width: 100%;
-    overflow: hidden;
-    position: relative; */
 
-    width: 45%;
-    margin: auto;
-    border: 5px solid white;
+.carousel {
+    width: 100%;
     overflow: hidden;
     position: relative;
 }
@@ -194,16 +189,13 @@ nav {
     width: 100%;
 }
 .slide {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     font-family: "Inconsolata", sans-serif;
     background: var(--clr-dark);
     color: white;
     min-width: 100%;
 }
 .slide p {
-    padding: 5%;
+    padding: 5% 5% 5% 8%;
     line-height: 2rem;
     font-size: 1.2rem;
 }
@@ -229,11 +221,11 @@ i {
 .nextBtn {
     right:0;
     transform: rotate(-45deg);
-    margin-right: 10px;
+    margin-right: 20px;
 }
 .prevBtn {
     transform: rotate(135deg);
-    margin-left: 10px;
+    margin-left: 20px;
 }
 
 .pauseBtn {
@@ -241,24 +233,24 @@ i {
     justify-content: center;
 }
 .pause {
-    font-size: 16px;
-    padding: 7px 15px;
-    border-radius: 4px;
-    bottom: 1%;
+    bottom: 5%;
+    right: 3%;
+    background: transparent;
     cursor: pointer;
     outline: none;
     z-index: 10;
     position: absolute;
+    border:none;
 }
 
 
 /* ----- why FAC starts here ----- */
 .svg-whyfac {
-    width: 100%;
-    margin: 0;
-    display: flex;
+    width: 80%;
+    /* margin: 0; */
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .grid-whyfac {
@@ -288,7 +280,7 @@ footer h4 {
     margin-bottom: 0;
 }
 footer div:last-child {
-    margin-top: 30px;
+    /* margin-top: 10px; */
     font-size: 1rem;
     letter-spacing: 0.5px;
 }
@@ -321,15 +313,6 @@ footer div:last-child {
     nav {
         width: 100%;
     }
-    .carousel {
-        width: 100vw;
-    }
-    .slides {
-        width: 100vw;
-    }
-    /* nav {
-        height: 100vh;
-    } */
     .flex-content:nth-of-type(4) {
         order: -1;
     }
@@ -338,5 +321,10 @@ footer div:last-child {
     }
     .grid-whyfac {
         grid-template-columns: 1fr;
+    }
+
+    #carousel {
+        padding: 0;
+        margin-right: 0;
     }
 }

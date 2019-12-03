@@ -59,6 +59,7 @@ const slides = document.querySelector(".slides");
 const prevBtn = document.querySelector(".prevBtn");
 const nextBtn = document.querySelector(".nextBtn");
 const pauseBtn = document.querySelector(".pause");
+const changeBtn = document.querySelector(".changeBtn")
 const images = document.querySelectorAll(".slides div");
 const size = images[0].clientWidth;
 
@@ -79,12 +80,13 @@ function playOrPause() {
   if(paused) {
     status = 1;
     paused = false;
-    pauseBtn.innerHTML = "Pause"
+    changeBtn.src = 'pause.png'
+    changeBtn.classList.add = ''
   }
   else {
     status = 0;
     paused = true;
-    pauseBtn.innerHTML = "Play"
+    changeBtn.src = 'play.png'
   }
 }
 
