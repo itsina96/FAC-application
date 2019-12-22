@@ -18,7 +18,7 @@ document.onmousemove = function() {
   let y = event.clientY * 100 / window.innerHeight + "%";
   
   for(let i = 0; i < 2; i++) {
-    balls[i].style.left = x;
+    balls[i].style.left =  x;
     balls[i].style.top = y;
     balls[i].style.transform = 'translate(-'+x+', -'+y+')';
   }
@@ -26,14 +26,14 @@ document.onmousemove = function() {
 
 // Scroll-to-top button appears 
 const btnScrollToTop = document.querySelector('.button-scroll');
-
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', btnAppear);
+function btnAppear() {
   if(window.pageYOffset > 500) {
     btnScrollToTop.style.display = 'block';
   } else {
     btnScrollToTop.style.display = 'none';
   }
-});
+};
 
 // Back to top when clicked 
 btnScrollToTop.addEventListener('click', backToTop);
@@ -80,13 +80,13 @@ function playOrPause() {
   if(paused) {
     status = 1;
     paused = false;
-    changeBtn.src = 'pause.png'
-    changeBtn.classList.add = ''
+    changeBtn.src = 'imgs/pause.png'
+    // changeBtn.classList.add = ''
   }
   else {
     status = 0;
     paused = true;
-    changeBtn.src = 'play.png'
+    changeBtn.src = 'imgs/play.png'
   }
 }
 
@@ -104,9 +104,9 @@ nextBtn.addEventListener('click', goForward);
 function goForward() {
   if (counter >= images.length -1) return;
   slides.style.transition = "transform 0.4s ease-in-out";
-  counter++;
+  counter++; 
   slides.style.transform = 'translateX(' + (-size * counter) + 'px)';
-}
+} 
 
 
 //Make an infinite loop of slides
@@ -117,6 +117,7 @@ function keepLooping() {
     counter = images.length -2;
     slides.style.transform = 'translateX(' + (-size * counter) + 'px)';
   }
+
   if (images[counter].id === 'firstClone') {
     slides.style.transition = "none";
     counter = images.length - counter;
@@ -130,10 +131,21 @@ slides.addEventListener('transitionend', keepLooping);
 function keyNav(e) {
   // why === doesn't work? because if the user input is a HTML input text field, it might interpret a number as a string. "37" === 37 false.
   if (e.keyCode == '37') {
-    goBack();
+    goBack(); 
   } else if (e.keyCode == '39') {
     goForward();
   }
 }
 window.addEventListener('keydown', keyNav);
 
+
+// Infinite marquee for links
+const root = document.documentElement;
+const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
+const marqueeContent = document.querySelector("ul.links-logo");
+
+root.style.setProperty("--marquee-elements", marqueeContent.children.length);
+
+for(let i = 0; i < marqueeElementsDisplayed; i++) {
+  marqueeContent.appendChild(marqueeContent.children[i].cloneNode(true));
+}
