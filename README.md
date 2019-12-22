@@ -1,5 +1,5 @@
 # FAC application 
-A personal website made for Founders and Coders.<br>
+A personal website as a part of Founders and Coders application.<br>
 This one page website is built with HTML, CSS and vanila Javascript.<br> 
 It does NOT include : Github themes, bootstrap, jquery or any other frameworks and libraries.
 
