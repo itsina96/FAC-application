@@ -1,3 +1,4 @@
+// Define variables for menu bar
 const header = document.querySelector('header');
 const nav = document.querySelector('nav');
 const burgerIcon = document.querySelector('.burger');
@@ -12,6 +13,7 @@ function crossBurger() {
   burgerIcon.classList.toggle('toggle');
 }
 
+// Moving eyes on mouse
 document.onmousemove = function() {
   let balls = document.querySelectorAll('.ball');
   let x = event.clientX * 100 / window.innerWidth + "%";
@@ -24,7 +26,7 @@ document.onmousemove = function() {
   }
 }
 
-// Scroll-to-top button appears 
+// 'up' button appears after a bit of scrolling down
 const btnScrollToTop = document.querySelector('.button-scroll');
 window.addEventListener('scroll', btnAppear);
 function btnAppear() {
@@ -35,7 +37,7 @@ function btnAppear() {
   }
 };
 
-// Back to top when clicked 
+// Back to top when 'up' button is clicked 
 btnScrollToTop.addEventListener('click', backToTop);
 function backToTop () {
   window.scrollTo({
@@ -46,14 +48,8 @@ function backToTop () {
 };
 
 
-/********* IMAGE CAROUSEL ***********/
-// Responsive (works on mobile and desktop)
-// Display one image at a time
-// Move between images when clicking navigation buttons
-// Toggle automatically looping through all images with a play/pause button
-// Allow keyboard navigation between images with the left/right arrow keys
 
-//Define variables
+//Define variables for image carousel
 const carousel = document.querySelector(".carousel");
 const slides = document.querySelector(".slides");
 const prevBtn = document.querySelector(".prevBtn");
@@ -81,7 +77,6 @@ function playOrPause() {
     status = 1;
     paused = false;
     changeBtn.src = 'imgs/pause.png'
-    // changeBtn.classList.add = ''
   }
   else {
     status = 0;
@@ -139,7 +134,7 @@ function keyNav(e) {
 window.addEventListener('keydown', keyNav);
 
 
-// Infinite marquee for links
+// Infinite marquee for the links
 const root = document.documentElement;
 const marqueeElementsDisplayed = getComputedStyle(root).getPropertyValue("--marquee-elements-displayed");
 const marqueeContent = document.querySelector("ul.links-logo");
