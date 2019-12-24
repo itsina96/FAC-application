@@ -4,7 +4,8 @@ This one page website is built with HTML, CSS and vanila Javascript.<br>
 It does NOT include : Github themes, bootstrap, jquery or any other frameworks and libraries.
 
 To visit, please click the link below.
-<a href="https://itsina96.github.io/FAC-application/">here</a>
+<a href="https://itsina96.github.io/FAC-application/">https://itsina96.github.io/FAC-application/</a>
+https://itsina96.github.io/FAC-application/
 
 # Prerequisites
 - [x] Earn a minimum of 250 points on freeCodeCamp.
