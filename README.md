@@ -3,7 +3,8 @@ A personal website as a part of Founders and Coders application.<br>
 This one page website is built with HTML, CSS and vanila Javascript.<br> 
 It does NOT include : Github themes, bootstrap, jquery or any other frameworks and libraries.
 
-To visit, please click <a href="http://itsina96.github.io/FAC-application">here</a>
+To visit, please click the link below.
+<a href="https://itsina96.github.io/FAC-application/">here</a>
 
 # Prerequisites
 - [x] Earn a minimum of 250 points on freeCodeCamp.
