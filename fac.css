@@ -1,5 +1,5 @@
 :root {
-    --clr-point:#e3513b;
+    --clr-red:#e3513b;
     --clr-dark:#292929;
     --clr-blue: #bccdeb;
     
@@ -11,6 +11,10 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+header {
+    cursor: pointer;
 }
 
 body {
@@ -54,10 +58,7 @@ section {
     padding: 1% 0;
 }
 
-/* ----- Navigation & burger icon----- */
-header {
-    cursor: pointer;
-}
+/* Navigation & burger icon */
 nav {
     width: 430px;
     left: -100%;
@@ -146,7 +147,7 @@ nav {
 }
 
 
-/* ----- Hi I'm Ina ----- */
+/* ---------- Intro starts here ---------- */
 #intro {
     height: 100vh;
     display: flex;
@@ -157,7 +158,6 @@ nav {
     text-align: center;
     letter-spacing: 0.85px;
 }
-
 .introText h1 {
     margin-bottom: 0;
     font-size: 2.8rem;
@@ -170,13 +170,12 @@ nav {
     width: 50px;
     height: 50px;
     border-radius: 100%;
-    background: var(--clr-point);
+    background: var(--clr-red);
     padding: 0;
     margin: 0 auto;
     animation: bouncing 0.7s infinite;
     animation-direction: alternate;
 }
-
 @keyframes bouncing {
     0% { transform: translateY(0); }
     100% { transform: translateY(-25px); }
@@ -184,40 +183,10 @@ nav {
 
 
 
-/* ----- My Journey starts here ----- */
+/* ---------- About Me starts here ---------- */
 .inawho {
     padding-bottom: 7%;
 }
-
-.iceberg {
-    display: flex;
-}
-
-.iceberg p {
-    margin: auto;
-    padding: 0 5%;
-    font-weight: 700;
-}
-
-.movingIceberg {
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background: var(--clr-point);
-    padding: 0;
-    margin: 0 auto;
-    animation: bouncing 1s infinite;
-    animation-direction: alternate;
-}
-@keyframes bouncing {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-45px); }
-}
-
-
-
-
-/* image carousel */
 .carousel {
     width: 100%;
     overflow: hidden;
@@ -303,18 +272,10 @@ i {
 }
 
 
-/* ----- Portfolio starts here ----- */
-
-
-
-
-/* Track my progress starts here */ 
-
+/* ----- Links starts here ----- */
 #portfolio {
     padding: 0 0;
 }
-
-/* CSS Custom Marquee */
 .links{
     width: 100vw;
     height: 20vh;
@@ -338,12 +299,6 @@ i {
 .links-logo:hover {
     animation-play-state: paused;
 }
-
-@keyframes marquee {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
-}
-
 .links-logo li {
     display: flex;
     justify-content: center;
@@ -352,7 +307,6 @@ i {
     width: var(--marquee-element-width);
     white-space: nowrap;
 }
-
 .links-logo li img {
     width: 170px;
 }
@@ -360,6 +314,10 @@ i {
     width: 220px;
 }
 
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
 
 
 /* ----- Footer starts here ----- */
@@ -383,7 +341,7 @@ footer p span {
     width: 65px;
     height: 65px;
     border-radius: 50%;
-    background: var(--clr-point);
+    background: var(--clr-red);
     border: none; 
     outline: none;
     cursor: pointer;
