@@ -3,17 +3,19 @@ const header = document.querySelector('header');
 const nav = document.querySelector('nav');
 const burgerIcon = document.querySelector('.burger');
 
+// Menu slides in when burger is clicked 
 header.addEventListener('click', showNav);
 function showNav () {
   nav.classList.toggle('navToggle');
 }
 
+// Burger animates when clicked
 header.addEventListener('click', crossBurger);
 function crossBurger() {
   burgerIcon.classList.toggle('toggle');
 }
 
-// Moving eyes on mouse
+// Eyes move on mouse
 document.onmousemove = function() {
   let balls = document.querySelectorAll('.ball');
   let x = event.clientX * 100 / window.innerWidth + "%";
@@ -30,7 +32,7 @@ document.onmousemove = function() {
 const btnScrollToTop = document.querySelector('.button-scroll');
 window.addEventListener('scroll', btnAppear);
 function btnAppear() {
-  if(window.pageYOffset > 500) {
+  if(window.pageYOffset > 600) {
     btnScrollToTop.style.display = 'block';
   } else {
     btnScrollToTop.style.display = 'none';
@@ -46,7 +48,6 @@ function backToTop () {
     behavior: 'smooth'
   });
 };
-
 
 
 //Define variables for image carousel
