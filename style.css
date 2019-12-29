@@ -312,11 +312,12 @@ i {
 .links-logo .freecodecamp {
     width: 220px;
 }
-
 @keyframes marquee {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
 }
+
+
 
 /* ----- Footer starts here ----- */
 footer {
