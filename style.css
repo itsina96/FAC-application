@@ -1,0 +1,407 @@
+:root {
+    --clr-red:#e3513b;
+    --clr-dark:#292929;
+    --clr-blue: #bccdeb;
+    
+    /* For custom marquee */
+    --marquee-elements-displayed: 5;
+    --marquee-element-width: calc(100vw / var(--marquee-elements-displayed));
+    --marquee-animation-duration: calc(var(--marquee-elements) * 3.5s);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    cursor: pointer;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #FCFBFA;
+    font-family: "Karla", sans-serif;
+    color: var(--clr-dark)
+}
+
+a {
+    text-decoration: none;
+    color: var(--clr-dark);
+}
+
+p, ol {
+    line-height: 2.5rem;
+    font-size: 1.32rem;
+    letter-spacing: 0.4px;
+}
+
+section {
+    padding: 5% 10%;
+    font-size: 1.65rem;
+}
+
+::selection {
+    color: white;
+    background: var(--clr-dark);
+}
+
+.title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 1% 0;
+}
+
+/* Navigation & burger icon */
+nav {
+    width: 430px;
+    left: -100%;
+    height: 100vh;
+    top:0%;
+    margin: 0;
+    z-index: 5;
+    background: var(--clr-blue);
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    transition: left 0.55s ease;
+    overflow: hidden;
+    position: fixed;
+}
+.nav-links {
+    list-style: none;
+    padding: 0;
+}
+.nav-links li {
+    padding-bottom: 30%;
+}
+.nav-links li, .backtotop {
+    letter-spacing: 2px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+.burger {
+    z-index: 10;
+    position: fixed;
+    padding: 35px 45px;
+}
+.burger div {
+    width: 30px;
+    height: 2px;
+    margin: 8px;
+    background-color: var(--clr-dark);
+}
+.burger span {
+    letter-spacing: 1px;
+}
+.toggle .line1 {
+    transform: rotateZ(-45deg) translate(-8px, 6px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotateZ(45deg) translate(-8px, -6px);
+}
+.line1, .line2, .line3 {
+    transition: all 0.3s ease;
+}
+.navToggle {
+    left:0;
+}
+
+/* Eye balls */
+.eyes {
+    transform: translateY(-50%);
+    margin: 130px 0 30px 0;
+}
+.eye {
+    width: 60px;
+    height: 90px;
+    background: transparent;
+    display: inline-block;
+    border: 1.5px solid var(--clr-dark);
+    border-radius: 50%;
+    /* margin: 8px; */
+    margin: 5px;
+    position: relative;
+    overflow: hidden;
+}
+.ball {
+    width: 25px;
+    height: 35px;
+    background: var(--clr-dark);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+
+/* ---------- Intro starts here ---------- */
+#intro {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 0.85px;
+}
+.introText h1 {
+    margin-bottom: 0;
+    font-size: 2.8rem;
+}
+.introText h3 {
+    margin-bottom: 15%;
+    font-size: 1.7rem;
+}
+.bouncing-ball {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background: var(--clr-red);
+    padding: 0;
+    margin: 0 auto;
+    animation: bouncing 0.7s infinite;
+    animation-direction: alternate;
+}
+@keyframes bouncing {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-25px); }
+}
+
+
+
+/* ---------- About Me starts here ---------- */
+.inawho {
+    padding-bottom: 7%;
+}
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.slide {
+    font-family: "Inconsolata", sans-serif;
+    background: var(--clr-dark);
+    color: white;
+    min-width: 100%;
+}
+.slide p {
+    padding: 5% 5% 5% 8%;
+    line-height: 2rem;
+    font-size: 1.2rem;
+}
+.slides {
+    display: flex;
+    width: 100%;
+}
+.subheading-carousel {
+    display: block;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+i {    
+    display: inline-block;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+}
+.prevBtn, .nextBtn {
+    cursor: pointer;
+    position: absolute;
+    top: 50%; 
+    z-index: 2;
+    padding: 7px;
+}
+.nextBtn {
+    right:0;
+    transform: rotate(-45deg);
+    margin-right: 20px;
+}
+.prevBtn {
+    transform: rotate(135deg);
+    margin-left: 20px;
+}
+.pauseBtn {
+    display: flex;
+    justify-content: center;
+}
+.pause {
+    bottom: 7%;
+    right: 3%;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    z-index: 10;
+    position: absolute;
+    border:none;
+}
+.manifesto {
+    font-size: 1rem;
+}
+
+
+/* ----- why FAC starts here ----- */
+.grid-whyfac {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 3rem;
+}
+.svg-whyfac {
+    width: 90%;
+}
+.grid-img {
+    text-align: center;
+    margin: auto;
+}
+.subheading-whyfac {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+/* ----- Links starts here ----- */
+#links {
+    padding: 0 0;
+}
+.links{
+    width: 100vw;
+    height: 20vh;
+    overflow: hidden;
+    position: relative;
+}  
+.links:before, .links:after {
+    position: absolute;
+    top: 0;
+    width: 10rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+}
+.links-logo {
+    list-style: none;
+    height: 100%;
+    display: flex;
+    animation: marquee var(--marquee-animation-duration) linear infinite;
+}
+.links-logo:hover {
+    animation-play-state: paused;
+}
+.links-logo li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: var(--marquee-element-width);
+    white-space: nowrap;
+}
+.links-logo li img {
+    width: 170px;
+}
+.links-logo .freecodecamp {
+    width: 220px;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-1 * var(--marquee-element-width) * var(--marquee-elements))); }
+}
+
+/* ----- Footer starts here ----- */
+footer {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 6% 0 2% 0;
+}
+footer h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0;
+}
+footer p span {
+    font-size: 1rem;
+    padding-top: 10%;
+}
+.button-scroll {
+    position: fixed;
+    right: 35px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: var(--clr-red);
+    border: none; 
+    outline: none;
+    cursor: pointer;
+    display: none;
+    z-index: 30;
+}
+.button-scroll div {
+    transform: rotate(-20deg);
+    letter-spacing: 1px;
+    font-size: 1.1rem;
+    color:white;
+    z-index: 31;
+}
+
+
+
+/* ----- Responsiveness on mobile ----- */
+@media screen and (max-width: 414px) {
+    h3.title {
+        font-size: 1.8rem;
+    }
+    .introText h3 {
+        font-size: 1.5rem;
+    }
+    p, ol {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    .backtotop {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        width: 100%;
+    }
+    
+    .supporter-logo li img {
+        width: 90%;
+    }
+
+    .grid-whyfac {
+        grid-template-columns: 1fr;
+    }
+    .grid-whyfac div:nth-of-type(3) {
+        order: 4;
+    }
+    .grid-whyfac div:nth-of-type(4) {
+        order: 3;
+    }
+    .grid-whyfac div:nth-of-type(5) {
+        order: 5;
+    }
+    .grid-whyfac div:nth-of-type(6) {
+        order: 6;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --marquee-elements-displayed: 2;
+    }
+}
