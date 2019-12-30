@@ -272,9 +272,6 @@ i {
 
 
 /* ----- Links starts here ----- */
-#links {
-    padding: 0 0;
-}
 .links{
     width: 100vw;
     height: 20vh;
@@ -358,19 +355,9 @@ footer p span {
 
 
 /* ----- Responsiveness on mobile ----- */
-@media screen and (max-width: 414px) {
-    h3.title {
-        font-size: 1.8rem;
-    }
-    .introText h3 {
-        font-size: 1.5rem;
-    }
-    p, ol {
-        font-size: 1rem;
-        line-height: 2rem;
-    }
-    .backtotop {
-        display: none;
+@media screen and (max-width: 900px) {
+    :root {
+        --marquee-elements-displayed: 2;
     }
 }
 
@@ -382,7 +369,7 @@ footer p span {
     .supporter-logo li img {
         width: 90%;
     }
-
+    
     .grid-whyfac {
         grid-template-columns: 1fr;
     }
@@ -400,8 +387,22 @@ footer p span {
     }
 }
 
-@media screen and (max-width: 900px) {
-    :root {
-        --marquee-elements-displayed: 2;
+@media screen and (max-width: 414px) {
+    h3.title {
+        font-size: 1.8rem;
+    }
+    .introText h3 {
+        font-size: 1.5rem;
+    }
+    p, ol {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    section {
+        padding: 0 0 0 0;
+    }
+    .backtotop {
+        display: none;
     }
 }
+
