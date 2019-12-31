@@ -272,6 +272,9 @@ i {
 
 
 /* ----- Links starts here ----- */
+#links {
+    padding: 0 0;
+}
 .links{
     width: 100vw;
     height: 20vh;
