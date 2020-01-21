@@ -6,7 +6,7 @@ It does **NOT** include : Github themes, bootstrap, jquery or any other framewor
 ## What is Founders & Coders?
 
 ## Prerequisites
-- [x] Earn a minimum of 250 points on freeCodeCamp.
+- [x] ~~Earn a minimum of 250 points on freeCodeCamp.~~
 - [x] Create a one-page website and host it on GitHub Pages.
 - [x] Reach 5 kyu and 300 honor points in JavaScript on Codewars.
  
