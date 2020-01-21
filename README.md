@@ -6,7 +6,7 @@ It does **NOT** include : Github themes, bootstrap, jquery and any other framewo
 ## What is Founders & Coders?
 FAC is a non-profit organisation and global developer community. They run an intensive, peer-led programming bootcamp in London which helps students from all backgrounds break into tech and make a social impact.
 >
-If you're also interested in applying, please visit [here](https://www.foundersandcoders.com/about).
+If you are also interested in applying, please visit [their website](https://www.foundersandcoders.com/about).
 
 ## Prerequisites
 - [x] Earn a minimum of 250 points on freeCodeCamp.
