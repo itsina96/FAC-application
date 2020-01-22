@@ -65,7 +65,7 @@ nav {
     height: 100vh;
     top:0%;
     margin: 0;
-    z-index: 5;
+    z-index: 9;
     background: var(--clr-blue);
     text-transform: uppercase;
     display: flex;
@@ -345,14 +345,14 @@ footer p span {
     outline: none;
     cursor: pointer;
     display: none;
-    z-index: 30;
+    z-index: 7;
 }
 .button-scroll div {
     transform: rotate(-20deg);
     letter-spacing: 1px;
     font-size: 1.1rem;
     color:white;
-    z-index: 31;
+    z-index: 8;
 }
 
 
@@ -389,15 +389,15 @@ footer p span {
 }
 
 @media screen and (max-width: 414px) {
+    p, ol {
+        font-size: 1rem;
+        line-height: 2rem;
+    }
     h3.title {
         font-size: 1.8rem;
     }
     .introText h3 {
         font-size: 1.5rem;
-    }
-    p, ol {
-        font-size: 1rem;
-        line-height: 2rem;
     }
     .backtotop {
         display: none;
