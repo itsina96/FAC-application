@@ -13,4 +13,4 @@ If you're also interested in applying, you can find more information on [their w
 - [x] Create a one-page website and host it on GitHub Pages.
 - [x] Reach 5 kyu and 300 honor points in JavaScript on Codewars.
  
-https://itsina96.github.io/FAC-application/ 
+https://ina-fac-application-2020.netlify.app/
